@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Cantora+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  list-style-type: none;
+}
+
+body {
+  height: 100vh;
+  background-color: #364b44;
+}
+
+.price-list > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+  padding: 5rem;
+  width: 1500px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.price-list > ul > li {
+  background-color: #d64161;
+  border-radius: 20px;
+  width: 450px;
+}
+
+.price-list h1 {
+  text-transform: uppercase;
+  color: white;
+  font-family: "Cantora One", sans-serif;
+}
+
+.price-list ul > li {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.price-list > ul h1,
+h2 {
+  padding: 1.5rem;
+}
+
+.price-list h2 {
+  color: white;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: #364b44;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.price-list ul > li,
+p,
+h2,
+h1 {
+  padding: 0.5rem 0;
+}
+
+.circle .fa-solid,
+.fa-regular {
+  color: white;
+  font-size: 55px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-list button {
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #364b44;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* animations */
+
+.price-list li {
+  animation: scale 1s ease-out;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0.1);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hover */
+
+.object:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  transition: all 0.8s;
+
+  .circle {
+    animation: rotate 1s ease-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    transition: box-shadow 0.5s;
+  }
+}
+
+.price-list button:hover {
+  transform: scale(1.04);
+  background-color: #23332e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  transition: all 0.5s;
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+  .price-list ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price-list > ul > li {
+    width: 360px;
+    margin: 0 auto;
+  }
+}
